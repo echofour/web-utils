@@ -1,0 +1,2 @@
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+for site in `cat $SCRIPT_DIR/domains.txt`; do rsync -av --delete $SCRIPT_DIR/../sites/$site/ /var/www/$site/htdocs/; done;

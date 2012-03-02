@@ -1,0 +1,1 @@
+for site in `ls -1 /var/www/`; do rsync -av --delete /var/www/$site/htdocs/ /home/ubuntu/dev/sites/$site/; done;
